@@ -60,7 +60,7 @@ export default {
       type: 'success'
     })
     // 获取图形验证码
-    this.getcode()
+    // this.getcode()
     // 获取存在本地的用户名密码
     this.getuserpwd()
     
@@ -116,7 +116,7 @@ export default {
           // })
         } else {
           // 获取图形验证码
-          this.getcode()
+          // this.getcode()
           this.$message.error('请输入用户名密码！')
           this.logining = false
           return false

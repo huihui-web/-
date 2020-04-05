@@ -30,29 +30,55 @@ const req = (method, url, params) => {
     return axios({
         method: method,
         url: url,
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-            token: localStorage.getItem('logintoken')
-        },
+        // headers: {
+        //     'Content-Type': 'application/x-www-form-urlencoded',
+        //     token: localStorage.getItem('logintoken')
+        // },
         data: params,
-        traditional: true,
-        transformRequest: [
-            function(data) {
-                let ret = ''
-                for (let it in data) {
-                    ret +=
-                        encodeURIComponent(it) +
-                        '=' +
-                        encodeURIComponent(data[it]) +
-                        '&'
-                }
-                return ret
-            }
-        ]
-    }).then(res => res.data);
+        // traditional: true,
+        // transformRequest: [
+        //     function(data) {
+        //         let ret = ''
+        //         for (let it in data) {
+        //             ret +=
+        //                 encodeURIComponent(it) +
+        //                 '=' +
+        //                 encodeURIComponent(data[it]) +
+        //                 '&'
+        //         }
+        //         return ret
+        //     }
+        // ]
+    }).then(res => res);
+};
+const reqget = (method, url, params) => {
+    return axios({
+        method: method,
+        url: url,
+        // headers: {
+        //     'Content-Type': 'application/x-www-form-urlencoded',
+        //     token: localStorage.getItem('logintoken')
+        // },
+        params: params,
+        // traditional: true,
+        // transformRequest: [
+        //     function(data) {
+        //         let ret = ''
+        //         for (let it in data) {
+        //             ret +=
+        //                 encodeURIComponent(it) +
+        //                 '=' +
+        //                 encodeURIComponent(data[it]) +
+        //                 '&'
+        //         }
+        //         return ret
+        //     }
+        // ]
+    }).then(res => res);
 };
 
 export {
     loginreq,
-    req
+    req,
+    reqget
 }

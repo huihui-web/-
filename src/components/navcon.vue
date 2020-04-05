@@ -16,7 +16,7 @@
   </el-menu>
 </template>
 <script>
-import { loginout } from '../api/userMG'
+import { OrderRefund1 } from '../api/school'
 export default {
   name: 'navcon',
   data() {
@@ -26,10 +26,14 @@ export default {
       imgsq: require('../assets/img/sq.png'),
       user: {}
     }
-  },
+  },  
   // 创建完毕状态(里面是操作)
   created() {
     this.user = JSON.parse(localStorage.getItem('userdata'))
+    OrderRefund1({ userName: 'joe', password: 111111 })
+      .then(res => {
+      console.log(res)
+      })
   },
   methods: {
     // 退出登录

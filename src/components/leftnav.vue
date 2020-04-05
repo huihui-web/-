@@ -46,30 +46,46 @@ export default {
             {
               menuid: 2,
               icon: 'icon-cat-skuQuery',
-              menuname: '商品管理',
+              menuname: '查看高校',
               hasThird: 'N',
               url: 'goods/Goods',
               menus: null
-            }
-          ]
-        },
-        {
-          menuid: 33,
-          icon: 'li-icon-dingdanguanli',
-          menuname: '订单管理',
-          hasThird: null,
-          url: null,
-          menus: [
+            },
             {
-              menuid: 34,
-              icon: 'icon-order-manage',
-              menuname: '交易订单',
+              menuid: 3,
+              icon: 'icon-cat-skuQuery',
+              menuname: '增加高校',
               hasThird: 'N',
-              url: 'pay/Order',
+              url: 'goods/addSchool',
+              menus: null
+            },
+            {
+              menuid: 4,
+              icon: 'icon-cat-skuQuery',
+              menuname: '高校信息修改',
+              hasThird: 'N',
+              url: 'goods/updateSchool',
               menus: null
             }
           ]
         },
+        // {
+        //   menuid: 33,
+        //   icon: 'li-icon-dingdanguanli',
+        //   menuname: '订单管理',
+        //   hasThird: null,
+        //   url: null,
+        //   menus: [
+        //     {
+        //       menuid: 34,
+        //       icon: 'icon-order-manage',
+        //       menuname: '交易订单',
+        //       hasThird: 'N',
+        //       url: 'pay/Order',
+        //       menus: null
+        //     }
+        //   ]
+        // },
         {
           menuid: 71,
           icon: 'li-icon-xitongguanli',
@@ -102,14 +118,6 @@ export default {
               menus: null
             },
             {
-              menuid: 74,
-              icon: 'icon-cs-manage',
-              menuname: '公司管理',
-              hasThird: 'N',
-              url: 'system/Dept',
-              menus: null
-            },
-            {
               menuid: 75,
               icon: 'icon-promotion-manage',
               menuname: '系统环境变量',
@@ -127,31 +135,31 @@ export default {
             }
           ]
         },
-        {
-          menuid: 128,
-          icon: 'li-icon-shangchengxitongtubiaozitihuayuanwenjian91',
-          menuname: '支付管理',
-          hasThird: null,
-          url: null,
-          menus: [
-            {
-              menuid: 129,
-              icon: 'icon-provider-manage',
-              menuname: '支付配置信息',
-              hasThird: 'N',
-              url: 'machine/MachineConfig',
-              menus: null
-            },
-            {
-              menuid: 175,
-              icon: 'icon-provider-manage',
-              menuname: '支付配置',
-              hasThird: 'N',
-              url: 'pay/Config',
-              menus: null
-            }
-          ]
-        },
+        // {
+        //   menuid: 128,
+        //   icon: 'li-icon-shangchengxitongtubiaozitihuayuanwenjian91',
+        //   menuname: '支付管理',
+        //   hasThird: null,
+        //   url: null,
+        //   menus: [
+        //     {
+        //       menuid: 129,
+        //       icon: 'icon-provider-manage',
+        //       menuname: '支付配置信息',
+        //       hasThird: 'N',
+        //       url: 'machine/MachineConfig',
+        //       menus: null
+        //     },
+        //     {
+        //       menuid: 175,
+        //       icon: 'icon-provider-manage',
+        //       menuname: '支付配置',
+        //       hasThird: 'N',
+        //       url: 'pay/Config',
+        //       menus: null
+        //     }
+        //   ]
+        // },
         {
           menuid: 150,
           icon: 'li-icon-shangchengxitongtubiaozitihuayuanwenjian91',

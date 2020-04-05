@@ -8,8 +8,10 @@ import index from '@/views/index';
 /**
  * 基础菜单
  */
-// 商品管理
+// 高校管理
 import Goods from '@/views/goods/Goods';
+import addSchool from '@/views/goods/addSchool';
+import updateSchool from '@/views/goods/updateSchool';
 // 机器信息管理
 import Machine from '@/views/machine/Machine';
 // 货道信息管理
@@ -78,8 +80,24 @@ export default new Router({
         iconCls: 'el-icon-tickets',
         children: [{
             path: '/goods/Goods',
-            name: '商品管理',
+            name: '查看高校',
             component: Goods,
+            meta: {
+                requireAuth: true
+            }
+        },
+        {
+            path: '/goods/addSchool',
+            name: '增加高校',
+            component: addSchool,
+            meta: {
+                requireAuth: true
+            }
+        },
+        {
+            path: '/goods/updateSchool',
+            name: '高校信息修改',
+            component: updateSchool,
             meta: {
                 requireAuth: true
             }
