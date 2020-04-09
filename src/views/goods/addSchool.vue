@@ -29,7 +29,7 @@
       <el-table-column align="center" type="selection" width="60"></el-table-column>
       <el-table-column sortable prop label="大学图标" width="100">
         <template slot-scope="scope">
-          <img :src="scope.row.strIcon" alt />
+          <img class="icon" :src="scope.row.strIcon" alt />
         </template>
       </el-table-column>
       <el-table-column sortable prop="strName" label="大学名称" width="300"></el-table-column>
@@ -245,6 +245,11 @@ export default {
 }
 .el-select--small {
   width: 100%;
+}
+.icon {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 </style>
 

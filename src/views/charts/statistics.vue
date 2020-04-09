@@ -11,7 +11,7 @@
     </el-breadcrumb>
     <!-- 搜索，切换 -->
     <el-row :gutter="23">
-      <el-col :span="18">
+      <!-- <el-col :span="18">
         <div class="stbgc">
           <el-row :gutter="23">
             <el-col :span="7">
@@ -28,7 +28,7 @@
             </el-col>
           </el-row>
         </div>
-      </el-col>
+      </el-col> -->
       <el-col :span="6">
         <div class="stbgc">
           <el-row>
@@ -96,7 +96,7 @@ export default {
         },
         legend: {
           data: [{
-            name: '销售总笔数',
+            name: '访问总人数',
             icon: 'rect'
           }],
           top: 1,
@@ -152,7 +152,7 @@ export default {
           }
         },
         series: [{
-          name: '销售总笔数',
+          name: '访问总人数',
           type: 'bar',
           barGap: 0,
           data: [50000, 70000, 80000, 40000, 50000, 30000, 40000, 60000, 50000, 40000, 60000, 40000],
@@ -189,7 +189,7 @@ export default {
         },
         legend: {
           data: [{
-            name: '销售总金额',
+            name: '注册人数',
             icon: 'rect'
           }],
           top: 1,
@@ -245,7 +245,7 @@ export default {
           }
         },
         series: [{
-          name: '销售总金额',
+          name: '注册人数',
           //   type: 'bar',
           type: 'line',
           barGap: 0,
@@ -334,7 +334,7 @@ export default {
       payoption: {
         backgroundColor: '#2c343c',
         title: {
-          text: '支付方式统计(金额)',
+          text: '查询高校次数统计(人次)',
           left: 10,
           top: 5,
           textStyle: {
@@ -358,16 +358,16 @@ export default {
         },
         series: [
           {
-            name: '支付方式统计(金额)',
+            name: '查询省份统计(人次)',
             type: 'pie',
             radius: '55%',
             center: ['50%', '50%'],
             data: [
-              { value: 335, name: '支付宝' },
-              { value: 310, name: '银商二维码' },
-              { value: 274, name: '会员' },
-              { value: 235, name: '微信支付' },
-              { value: 100, name: 'Pos通' }
+              { value: 335, name: '北京大学' },
+              { value: 310, name: '清华大学' },
+              { value: 274, name: '广州大学华软软件学院' },
+              { value: 235, name: '广东工业大学' },
+              { value: 100, name: '广州大学' }
             ].sort(function (a, b) { return a.value - b.value; }),
             roseType: 'radius',
             label: {
@@ -406,7 +406,7 @@ export default {
       payNumoption: {
         backgroundColor: '#2c343c',
         title: {
-          text: '支付方式统计(笔数)',
+          text: '查询省份统计(人次)',
           left: 10,
           top: 5,
           textStyle: {
@@ -435,11 +435,11 @@ export default {
             radius: '55%',
             center: ['50%', '50%'],
             data: [
-              { value: 335, name: '支付宝' },
-              { value: 310, name: '银商二维码' },
-              { value: 274, name: '会员' },
-              { value: 235, name: '微信支付' },
-              { value: 100, name: 'Pos通' }
+              { value: 335, name: '广东' },
+              { value: 310, name: '北京' },
+              { value: 274, name: '香港' },
+              { value: 235, name: '上海' },
+              { value: 100, name: '湖北' }
             ].sort(function (a, b) { return a.value - b.value; }),
             roseType: 'radius',
             label: {
