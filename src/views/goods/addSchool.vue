@@ -33,7 +33,8 @@
         </template>
       </el-table-column>
       <el-table-column sortable prop="strName" label="大学名称" width="300"></el-table-column>
-      <el-table-column sortable prop="strId" label="大学id" width="300"></el-table-column>
+      <el-table-column sortable prop="strId" label="大学strId" width="300"></el-table-column>
+      <el-table-column sortable prop="intId" label="大学intId" width="300"></el-table-column>
       <el-table-column sortable prop="strLocProvince" label="省份" width="300"></el-table-column>
       <el-table-column sortable prop="strObey" label="所属部门" width="300"></el-table-column>
     </el-table>
@@ -47,8 +48,11 @@
             placeholder="请输入大学名称"
           ></el-input>
         </el-form-item>
-        <el-form-item label="大学id" prop="strId">
-          <el-input size="small" v-model="editForm.strId" auto-complete="off" placeholder="请输入大学id"></el-input>
+        <el-form-item label="大学strId" prop="strId">
+          <el-input size="small" v-model="editForm.strId" auto-complete="off" placeholder="请输入大学strId"></el-input>
+        </el-form-item>
+        <el-form-item label="大学intId" prop="intId">
+          <el-input size="small" v-model="editForm.intId" auto-complete="off" placeholder="请输入大学intId"></el-input>
         </el-form-item>
         <el-form-item label="大学图案" prop="strIcon">
           <el-input
@@ -124,6 +128,7 @@ export default {
       title: "添加",
       editForm: {
         strId: "",
+        strId: "",
         strName: "",
         strLocProvince: "",
         strIcon: "",
@@ -143,7 +148,8 @@ export default {
         strObey: [
           { required: true, message: "请选择隶属部门", trigger: "blur" }
         ],
-        strId: [{ required: true, message: "请输入大学id", trigger: "blur" }],
+        strId: [{ required: true, message: "请输入大学strId", trigger: "blur" }],
+        intId: [{ required: true, message: "请输入大学intId", trigger: "blur" }],
         strIcon: [
           { required: true, message: "请输入图标地址", trigger: "blur" }
         ]
@@ -191,6 +197,7 @@ export default {
           this.editForm.strLocProvince = "";
           this.editForm.strIcon = "";
           this.editForm.strName = "";
+          this.editForm.intId = "";
           this.editForm.strId = "";
           this.editForm.strObey = "";
           this.editForm.strJianjie = "";
